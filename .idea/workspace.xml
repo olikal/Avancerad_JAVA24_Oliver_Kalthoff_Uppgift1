@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4679b5c4-d77a-450f-a5e5-524d863cb038" name="Changes" comment="Första commit, lagt till classer och interface samt README.md.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/CarRental/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CarRental/Motorcycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarRental/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Convertible.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarRental/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Rentable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarRental/Rentable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Suv.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Truck.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarRental/Vehicle.java" afterDir="false" />
-    </list>
+    <list default="true" id="4679b5c4-d77a-450f-a5e5-524d863cb038" name="Changes" comment="--Klasser&#10;-Skapat menu klass som kör applikationen&#10;-Ändrat antalet fordon till bilar och motorcyklar&#10;&#10;Main&#10;-Instansierat menu&#10;-Kallar på metod menu för att starta aplikation&#10;&#10;--Menu&#10;-Skapat linkedhashmap för enkel åtkomst av mina objekt med sökning på regnr. Linked för bättre sortering efter hur de matats in.&#10;-Lagt till metod som skapar fordon och lägger dem i hashmap&#10;-Lagt till meny-metod.&#10;&#10;--Vehicle (Abstract)&#10;-Lagt till variabler. &#10;-Skapat konstruktor.&#10;-Lagt till setters och getters.&#10;-Skapat placeholder för calculateFee metod.&#10;-Skapat toString metod för formaterad utskrift.&#10;&#10;--Car//Motorcycle&#10;-Skapat unika variabler för varje subklass&#10;-Skapat konstruktor som skickar till super + sparar unik variabel som antal dörrar/hjul&#10;-Implementerat metoder från super som overridar&#10;&#10;--ToDo&#10;-Skapa return funktion&#10;-Skapa calculate fee funktion&#10;-Kanske lägga till try-catch vid inmatning.&#10;-Kommentera kod" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +109,7 @@
       <updated>1733054885787</updated>
       <workItem from="1733054886767" duration="1920000" />
       <workItem from="1733131404802" duration="595000" />
-      <workItem from="1733219533547" duration="15481000" />
+      <workItem from="1733219533547" duration="16075000" />
     </task>
     <task id="LOCAL-00001" summary="Första commit, lagt till classer och interface samt README.md.">
       <option name="closed" value="true" />
@@ -130,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733056238872</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="--Klasser&#10;-Skapat menu klass som kör applikationen&#10;-Ändrat antalet fordon till bilar och motorcyklar&#10;&#10;Main&#10;-Instansierat menu&#10;-Kallar på metod menu för att starta aplikation&#10;&#10;--Menu&#10;-Skapat linkedhashmap för enkel åtkomst av mina objekt med sökning på regnr. Linked för bättre sortering efter hur de matats in.&#10;-Lagt till metod som skapar fordon och lägger dem i hashmap&#10;-Lagt till meny-metod.&#10;&#10;--Vehicle (Abstract)&#10;-Lagt till variabler. &#10;-Skapat konstruktor.&#10;-Lagt till setters och getters.&#10;-Skapat placeholder för calculateFee metod.&#10;-Skapat toString metod för formaterad utskrift.&#10;&#10;--Car//Motorcycle&#10;-Skapat unika variabler för varje subklass&#10;-Skapat konstruktor som skickar till super + sparar unik variabel som antal dörrar/hjul&#10;-Implementerat metoder från super som overridar&#10;&#10;--ToDo&#10;-Skapa return funktion&#10;-Skapa calculate fee funktion&#10;-Kanske lägga till try-catch vid inmatning.&#10;-Kommentera kod">
+      <option name="closed" value="true" />
+      <created>1733260750042</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1733260750042</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +146,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Första commit, lagt till classer och interface samt README.md." />
-    <option name="LAST_COMMIT_MESSAGE" value="Första commit, lagt till classer och interface samt README.md." />
+    <MESSAGE value="--Klasser&#10;-Skapat menu klass som kör applikationen&#10;-Ändrat antalet fordon till bilar och motorcyklar&#10;&#10;Main&#10;-Instansierat menu&#10;-Kallar på metod menu för att starta aplikation&#10;&#10;--Menu&#10;-Skapat linkedhashmap för enkel åtkomst av mina objekt med sökning på regnr. Linked för bättre sortering efter hur de matats in.&#10;-Lagt till metod som skapar fordon och lägger dem i hashmap&#10;-Lagt till meny-metod.&#10;&#10;--Vehicle (Abstract)&#10;-Lagt till variabler. &#10;-Skapat konstruktor.&#10;-Lagt till setters och getters.&#10;-Skapat placeholder för calculateFee metod.&#10;-Skapat toString metod för formaterad utskrift.&#10;&#10;--Car//Motorcycle&#10;-Skapat unika variabler för varje subklass&#10;-Skapat konstruktor som skickar till super + sparar unik variabel som antal dörrar/hjul&#10;-Implementerat metoder från super som overridar&#10;&#10;--ToDo&#10;-Skapa return funktion&#10;-Skapa calculate fee funktion&#10;-Kanske lägga till try-catch vid inmatning.&#10;-Kommentera kod" />
+    <option name="LAST_COMMIT_MESSAGE" value="--Klasser&#10;-Skapat menu klass som kör applikationen&#10;-Ändrat antalet fordon till bilar och motorcyklar&#10;&#10;Main&#10;-Instansierat menu&#10;-Kallar på metod menu för att starta aplikation&#10;&#10;--Menu&#10;-Skapat linkedhashmap för enkel åtkomst av mina objekt med sökning på regnr. Linked för bättre sortering efter hur de matats in.&#10;-Lagt till metod som skapar fordon och lägger dem i hashmap&#10;-Lagt till meny-metod.&#10;&#10;--Vehicle (Abstract)&#10;-Lagt till variabler. &#10;-Skapat konstruktor.&#10;-Lagt till setters och getters.&#10;-Skapat placeholder för calculateFee metod.&#10;-Skapat toString metod för formaterad utskrift.&#10;&#10;--Car//Motorcycle&#10;-Skapat unika variabler för varje subklass&#10;-Skapat konstruktor som skickar till super + sparar unik variabel som antal dörrar/hjul&#10;-Implementerat metoder från super som overridar&#10;&#10;--ToDo&#10;-Skapa return funktion&#10;-Skapa calculate fee funktion&#10;-Kanske lägga till try-catch vid inmatning.&#10;-Kommentera kod" />
   </component>
 </project>
