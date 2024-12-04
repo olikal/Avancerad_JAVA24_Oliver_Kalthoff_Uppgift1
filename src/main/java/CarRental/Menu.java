@@ -5,7 +5,8 @@ import java.util.LinkedHashMap;
 import java.util.Scanner;
 
 public class Menu {
-    private HashMap<String, Object> vehicleList = new LinkedHashMap<>();
+    private HashMap<String, Vehicle> vehicleList = new LinkedHashMap<>();
+    private HashMap<String, Vehicle> rentedVehicleList = new LinkedHashMap<>();
 
     public void skapaFordon() {
         vehicleList.put("ASD123",
@@ -26,48 +27,110 @@ public class Menu {
         Scanner scanner = new Scanner(System.in);
         skapaFordon();
 
+        System.out.println("--**|| Welcome to CarRental! ||**--\n");
+
         while (true){
-            System.out.println("Welcome to CarRental!\n");
-            System.out.println("1. See list of vehicles");
-            System.out.println("2. Rent car");
-            System.out.println("3. Return car");
-            System.out.println("4. Exit\n");
+            System.out.println("1. See list of available vehicles");
+            System.out.println("2. Rent vehicle");
+            System.out.println("3. See list of rented vehicles");
+            System.out.println("4. Return vehicle");
+            System.out.println("5. Exit\n");
             System.out.println("Please make a choice using the numbers above");
 
+            int menuChoice = 0;
 
-            int menuChoice = scanner.nextInt();
-            scanner.nextLine();
-
+            try {
+                menuChoice = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e){
+                // Ingen prompt då den ändå visas från default i switch case.. Kanske är fel men det såg konstigt ut.
+            }
 
             switch (menuChoice) {
                 case 1:
-                    for (Object vehicle : vehicleList.values()){
-                        System.out.println(vehicle);
-                    }
+                    printVehicleList(vehicleList);
                     break;
                 case 2:
-                    System.out.println("Enter registration ID for the vehicle you want to rent");
-                    String selectedVehicle = scanner.nextLine().toUpperCase();
-                    if (vehicleList.containsKey(selectedVehicle)) {
-                        Vehicle vehicle = (Vehicle) vehicleList.get(selectedVehicle);
-                        vehicle.rentVehicle();
-                        vehicleList.remove(selectedVehicle);
-                    } else {
-                        System.out.println("Vehicle not found");
-                    }
+                    rentVehicle();
                     break;
                 case 3:
-                    // ToDo - implement return feature
+                    printRentedVehicleList(rentedVehicleList);
                     break;
                 case 4:
-                    System.out.println("Please come again!");
+                    returnVehicle();
+                    break;
+                case 5:
+                    System.out.println("Thanks for choosing CarRental! Please come again!");
                     return;
                 default:
-                    System.out.println("Please enter a valid option, numbers 1-4.");
+                    System.out.println("Please enter a valid option, numbers 1-5.\n");
             }
 
         }
 
+    }
+
+    public void rentVehicle(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter registration ID for the vehicle you want to rent");
+        String selectedVehicle = scanner.nextLine().toUpperCase();
+
+        if (vehicleList.containsKey(selectedVehicle)) {
+            Vehicle vehicle = vehicleList.get(selectedVehicle);
+            vehicle.rentVehicle();
+            rentedVehicleList.put(selectedVehicle, vehicle);
+            vehicleList.remove(selectedVehicle);
+        } else {
+            System.out.println("Vehicle not found\n");
+        }
+    }
+
+    public void returnVehicle(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter registration ID for the vehicle you want to return");
+        String returnedVehicle = scanner.nextLine().toUpperCase();
+
+        if (rentedVehicleList.containsKey(returnedVehicle)) {
+            Vehicle vehicle = rentedVehicleList.get(returnedVehicle);
+            System.out.println("Enter number of days vehicle was rented");
+            int rentedDays = Integer.parseInt(scanner.nextLine());
+            returnPayment(returnedVehicle, rentedDays);
+            vehicle.returnVehicle();
+            vehicleList.put(returnedVehicle, vehicle);
+            rentedVehicleList.remove(returnedVehicle);
+        } else {
+            System.out.println("Vehicle not found\n");
+        }
+    }
+
+    public void returnPayment(String registrationID, int rentedDays){
+        Vehicle vehicle = rentedVehicleList.get(registrationID);
+        System.out.println("The price for the vehicle rented is: " + vehicle.calculateFee(rentedDays) + "\n");
+    }
+
+    public void printVehicleList(HashMap<String, Vehicle> vehicleList) {
+        if (vehicleList.isEmpty()){
+            System.out.println("No vehicles available\n");
+        } else {
+            System.out.println("These are the vehicles available:\n");
+            for (Object vehicle : vehicleList.values()) {
+                System.out.println(vehicle);
+            }
+            System.out.println();
+        }
+    }
+
+    public void printRentedVehicleList(HashMap<String, Vehicle> rentedVehicleList) {
+        if (rentedVehicleList.isEmpty()){
+            System.out.println("No rented vehicles found\n");
+        } else {
+            System.out.println("These are the rented vehicles found:\n");
+            for (Object vehicle : rentedVehicleList.values()) {
+                System.out.println(vehicle);
+            }
+            System.out.println();
+        }
     }
 
 

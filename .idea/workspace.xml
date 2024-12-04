@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4679b5c4-d77a-450f-a5e5-524d863cb038" name="Changes" comment="--Klasser&#10;-Skapat menu klass som kör applikationen&#10;-Ändrat antalet fordon till bilar och motorcyklar&#10;&#10;Main&#10;-Instansierat menu&#10;-Kallar på metod menu för att starta aplikation&#10;&#10;--Menu&#10;-Skapat linkedhashmap för enkel åtkomst av mina objekt med sökning på regnr. Linked för bättre sortering efter hur de matats in.&#10;-Lagt till metod som skapar fordon och lägger dem i hashmap&#10;-Lagt till meny-metod.&#10;&#10;--Vehicle (Abstract)&#10;-Lagt till variabler. &#10;-Skapat konstruktor.&#10;-Lagt till setters och getters.&#10;-Skapat placeholder för calculateFee metod.&#10;-Skapat toString metod för formaterad utskrift.&#10;&#10;--Car//Motorcycle&#10;-Skapat unika variabler för varje subklass&#10;-Skapat konstruktor som skickar till super + sparar unik variabel som antal dörrar/hjul&#10;-Implementerat metoder från super som overridar&#10;&#10;--ToDo&#10;-Skapa return funktion&#10;-Skapa calculate fee funktion&#10;-Kanske lägga till try-catch vid inmatning.&#10;-Kommentera kod" />
+    <list default="true" id="4679b5c4-d77a-450f-a5e5-524d863cb038" name="Changes" comment="--Klasser&#10;-Skapat menu klass som kör applikationen&#10;-Ändrat antalet fordon till bilar och motorcyklar&#10;&#10;Main&#10;-Instansierat menu&#10;-Kallar på metod menu för att starta aplikation&#10;&#10;--Menu&#10;-Skapat linkedhashmap för enkel åtkomst av mina objekt med sökning på regnr. Linked för bättre sortering efter hur de matats in.&#10;-Lagt till metod som skapar fordon och lägger dem i hashmap&#10;-Lagt till meny-metod.&#10;&#10;--Vehicle (Abstract)&#10;-Lagt till variabler. &#10;-Skapat konstruktor.&#10;-Lagt till setters och getters.&#10;-Skapat placeholder för calculateFee metod.&#10;-Skapat toString metod för formaterad utskrift.&#10;&#10;--Car//Motorcycle&#10;-Skapat unika variabler för varje subklass&#10;-Skapat konstruktor som skickar till super + sparar unik variabel som antal dörrar/hjul&#10;-Implementerat metoder från super som overridar&#10;&#10;--ToDo&#10;-Skapa return funktion&#10;-Skapa calculate fee funktion&#10;-Kanske lägga till try-catch vid inmatning.&#10;-Kommentera kod">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarRental/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarRental/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarRental/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Motorcycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarRental/Motorcycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Rentable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarRental/Rentable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CarRental/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CarRental/Vehicle.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,25 +61,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "test-branch",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;test-branch&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CarRental.Main" />
@@ -109,7 +118,8 @@
       <updated>1733054885787</updated>
       <workItem from="1733054886767" duration="1920000" />
       <workItem from="1733131404802" duration="595000" />
-      <workItem from="1733219533547" duration="16075000" />
+      <workItem from="1733219533547" duration="16421000" />
+      <workItem from="1733302900348" duration="10962000" />
     </task>
     <task id="LOCAL-00001" summary="Första commit, lagt till classer och interface samt README.md.">
       <option name="closed" value="true" />
@@ -127,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733260750042</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="--Klasser&#10;-Skapat menu klass som kör applikationen&#10;-Ändrat antalet fordon till bilar och motorcyklar&#10;&#10;Main&#10;-Instansierat menu&#10;-Kallar på metod menu för att starta aplikation&#10;&#10;--Menu&#10;-Skapat linkedhashmap för enkel åtkomst av mina objekt med sökning på regnr. Linked för bättre sortering efter hur de matats in.&#10;-Lagt till metod som skapar fordon och lägger dem i hashmap&#10;-Lagt till meny-metod.&#10;&#10;--Vehicle (Abstract)&#10;-Lagt till variabler. &#10;-Skapat konstruktor.&#10;-Lagt till setters och getters.&#10;-Skapat placeholder för calculateFee metod.&#10;-Skapat toString metod för formaterad utskrift.&#10;&#10;--Car//Motorcycle&#10;-Skapat unika variabler för varje subklass&#10;-Skapat konstruktor som skickar till super + sparar unik variabel som antal dörrar/hjul&#10;-Implementerat metoder från super som overridar&#10;&#10;--ToDo&#10;-Skapa return funktion&#10;-Skapa calculate fee funktion&#10;-Kanske lägga till try-catch vid inmatning.&#10;-Kommentera kod">
+      <option name="closed" value="true" />
+      <created>1733260907984</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733260907984</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +156,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="test-branch" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

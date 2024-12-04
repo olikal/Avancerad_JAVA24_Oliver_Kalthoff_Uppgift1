@@ -1,5 +1,7 @@
 package CarRental;
 
+import java.util.HashSet;
+
 public abstract class Vehicle implements Rentable {
     private String registrationID;
     private String brand;
@@ -59,19 +61,20 @@ public abstract class Vehicle implements Rentable {
     }
 
 
-
     public void rentVehicle() {
+
     }
 
     public void returnVehicle() {
+
     }
 
     public double calculateFee(int rentalDays) {
-        return pricePerDay * rentalDays; // ToDo - placeholder for fee calculation
+        return pricePerDay * rentalDays;
     }
 
     public String toString() {
-        return "Regnr: " + registrationID + ", Märke: " + brand + ", Modell: " + modelId + ", Pris: " + pricePerDay + ", Färg: " + vehicleColor;
+        return "Regnr: " + registrationID + ", Märke: " + brand + ", Modell: " + modelId + ", Pris/dag: " + pricePerDay + " SEK, Färg: " + vehicleColor;
     }
 
     public abstract void calculateFee();

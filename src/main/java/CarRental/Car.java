@@ -10,16 +10,17 @@ public class Car extends Vehicle {
 
     @Override
     public void rentVehicle() {
-        System.out.println("You have rented car: " + getBrand() + ": " + getRegistrationID());
+        System.out.println("You have rented car: " + getBrand() + ": " + getRegistrationID() + "\n");
     }
 
     @Override
     public void returnVehicle() {
-        System.out.println("You have returned car: " + getBrand() + ": " + getRegistrationID());
+        System.out.println("You have returned car: " + getBrand() + ": " + getRegistrationID() + "\n");
     }
 
     @Override
     public void calculateFee() {
-        // ToDo - implement fee calculation
+
     }
+
 }

@@ -8,5 +8,4 @@ public interface Rentable {
 
     double calculateFee(int rentalDays);
 
-
 }
