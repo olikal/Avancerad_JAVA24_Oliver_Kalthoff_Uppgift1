@@ -2,7 +2,9 @@ package CarRental;
 
 import java.util.HashSet;
 
+// Abstrakt klass vehicle som implementar interface Rentable
 public abstract class Vehicle implements Rentable {
+    // Variabler för alla subklasser till vehicle
     private String registrationID;
     private String brand;
     private String modelId;
@@ -10,6 +12,7 @@ public abstract class Vehicle implements Rentable {
     private String vehicleColor;
 
 
+    // Konstruktor för alla subklasser
     public Vehicle(String registrationID,String brand,String modelId, int pricePerDay, String vehicleColor) {
         this.registrationID = registrationID;
         this.brand = brand;
@@ -19,7 +22,7 @@ public abstract class Vehicle implements Rentable {
     }
 
 
-
+    // Getters och setters
     public String getRegistrationID() {
         return registrationID;
     }
@@ -69,13 +72,14 @@ public abstract class Vehicle implements Rentable {
 
     }
 
+    // Metod för att räkna ut totalpriset för alla vehicles/subklasser
     public double calculateFee(int rentalDays) {
         return pricePerDay * rentalDays;
     }
 
+    // toString metod som returnerar formaterad sträng med information om vehicle objektens värden istället för bara en hashkod vid tex system.out.println(vehicle)
     public String toString() {
         return "Regnr: " + registrationID + ", Märke: " + brand + ", Modell: " + modelId + ", Pris/dag: " + pricePerDay + " SEK, Färg: " + vehicleColor;
     }
 
-    public abstract void calculateFee();
 }
