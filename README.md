@@ -36,7 +36,7 @@ To run this project, you will need the following:
 ##### **Clone the repository:**
 
 ```bash
-git clone https://github.com/olikal/CarRental.git 
+git clone https://github.com/olikal/Avancerad_JAVA24_Oliver_Kalthoff_Uppgift1 
 cd CarRental
 ```
 
